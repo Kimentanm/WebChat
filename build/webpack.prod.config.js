@@ -12,7 +12,7 @@ fs.open('src/webapp/config/env.js', 'w', function(err, fd) {
 
 module.exports = merge(webpackBaseConfig, {
     output: {
-        publicPath: '/',
+        publicPath: '/web-chat',
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].chunk.js'
     },
