@@ -1,0 +1,71 @@
+.own-space{
+    &-btn-box{
+        margin-bottom: 10px;
+        button{
+            padding-left: 0;
+            span{
+                color: #2D8CF0;
+                transition: all .2s;
+            }
+            span:hover{
+                color: #0C25F1;
+                transition: all .2s;
+            }
+        }
+    }
+    &-tra{
+        width:10px;
+        height:10px;
+        transform:rotate(45deg);
+        position:absolute;
+        top:50%;
+        margin-top:-6px;
+        left:-3px;
+        box-shadow:0 0 2px 3px rgba(0,0,0,.1);
+        background-color:white;z-index:100;
+    }
+    &-input-identifycode-con{
+        position:absolute;
+        width:200px;
+        height:100px;
+        right:-220px;
+        top:50%;
+        margin-top:-50px;
+        border-radius:4px;
+        box-shadow:0 0 2px 3px rgba(0,0,0,.1);
+    }
+}
+
+.own-img {
+    height: 80px;
+    width: 80px;
+    margin-top: 16px;
+    border-radius: 50%;
+    background-color: whitesmoke;
+}
+.update-own-img-button {
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-60%);
+    margin-left: 25px;
+}
+
+.header {
+    height: 60px;
+    background-color: #eee;
+    border: 1px solid #dddee1;
+    margin-left: -1px;
+    z-index:5;
+    top:0;
+    display:flex;/*Flex布局*/
+    display: -webkit-flex; /* Safari */
+    align-items:center;/*指定垂直居中*/
+
+    .text {
+        font-weight: bold;
+        margin-left: 20px;
+        font-size: 16px;
+        color: #000000;
+    }
+}

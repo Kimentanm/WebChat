@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsd.dao.ChatHistoryMapper">
+  <resultMap id="BaseResultMap" type="com.hsd.model.ChatHistory">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="sender" jdbcType="BIGINT" property="sender" />
+    <result column="receiver" jdbcType="BIGINT" property="receiver" />
+    <result column="time" jdbcType="TIMESTAMP" property="time" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="created_date" jdbcType="TIMESTAMP" property="createdDate" />
+    <result column="last_modified_by" jdbcType="BIGINT" property="lastModifiedBy" />
+    <result column="last_modified_date" jdbcType="TIMESTAMP" property="lastModifiedDate" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="content" jdbcType="LONGVARCHAR" property="content" />
+    <result column="read_message" jdbcType="INTEGER" property="readMessage" />
+  </resultMap>
+
+  <update id="readHistory">
+    UPDATE hsd_chat_history
+    SET read_message = 1
+    WHERE sender = #{senderId}
+  </update>
+
+  <select id="findCurrentUserChatHistory" resultMap="BaseResultMap">
+    SELECT *
+    FROM hsd_chat_history
+    WHERE (sender = #{sender} AND receiver = #{receiver})
+    OR (sender = #{receiver} AND receiver = #{sender})
+    ORDER BY id DESC
+  </select>
+
+    <select id="findFriendChatHistory" resultMap="BaseResultMap">
+     SELECT *
+     FROM hsd_chat_history
+     WHERE sender = #{sender} AND receiver = #{receiver}
+    </select>
+</mapper>

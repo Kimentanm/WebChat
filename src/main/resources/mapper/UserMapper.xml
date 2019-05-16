@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsd.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.hsd.model.User">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="login_name" jdbcType="VARCHAR" property="loginName" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="created_date" jdbcType="TIMESTAMP" property="createdDate" />
+    <result column="last_modified_by" jdbcType="BIGINT" property="lastModifiedBy" />
+    <result column="last_modified_date" jdbcType="TIMESTAMP" property="lastModifiedDate" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+  </resultMap>
+
+    <update id="updateImageUrl">
+      UPDATE tbl_user SET image_url = #{imageUrl}
+      WHERE id = #{userId}
+    </update>
+
+    <select id="findById" resultMap="BaseResultMap">
+    SELECT *
+    FROM tbl_user u
+    WHERE u.id = #{id}
+  </select>
+
+  <select id="findByLoginName" resultMap="BaseResultMap">
+    SELECT *
+    FROM tbl_user
+    WHERE login_name = #{loginName}
+  </select>
+
+  <select id="findByName" resultMap="BaseResultMap">
+    SELECT *
+    FROM tbl_user
+    WHERE name LIKE concat('%',#{name},'%')
+  </select>
+</mapper>

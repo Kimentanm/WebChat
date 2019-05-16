@@ -1,0 +1,4 @@
+src/vendors
+build
+index.js
+src/views/my-components/text-editor/tinymce

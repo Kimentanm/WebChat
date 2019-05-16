@@ -1,0 +1,42 @@
+.header {
+  height: 60px;
+  background-color: #eee;
+  border: 1px solid #dddee1;
+  margin-left: -1px;
+  z-index:5;
+  top:0;
+  display:flex;/*Flex布局*/
+  display: -webkit-flex; /* Safari */
+  align-items:center;/*指定垂直居中*/
+
+  .text {
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #000000;
+  }
+}
+
+.messageStyle {
+  overflow:auto;
+  top:60px;
+  position:absolute;
+  z-index:10;width: 100%;bottom: 0px
+}
+.textStyle {
+  height: 160px;
+  border-top: solid 1px #ddd;
+  width:100%;
+  position:absolute;
+  z-index:200;
+  bottom:0;
+  textarea {
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: "PingFang SC";
+    resize: none;
+  }
+}

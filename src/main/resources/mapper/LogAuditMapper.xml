@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thng.admin.dao.LogAuditMapper">
+  <resultMap id="BaseResultMap" type="com.hsd.model.LogAudit">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="action" jdbcType="VARCHAR" property="action" />
+    <result column="model" jdbcType="VARCHAR" property="model" />
+    <result column="func_code" jdbcType="VARCHAR" property="funcCode" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="created_date" jdbcType="TIMESTAMP" property="createdDate" />
+    <result column="last_modified_by" jdbcType="BIGINT" property="lastModifiedBy" />
+    <result column="last_modified_date" jdbcType="TIMESTAMP" property="lastModifiedDate" />
+    <result column="version" jdbcType="INTEGER" property="version" />
+    <result column="before_image" jdbcType="LONGVARCHAR" property="beforeImage" />
+    <result column="after_image" jdbcType="LONGVARCHAR" property="afterImage" />
+  </resultMap>
+</mapper>

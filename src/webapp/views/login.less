@@ -1,0 +1,38 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    &-con{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+        width: 300px;
+        align-self: center;
+        text-align: center;
+        img {
+            height: 80px;
+            width: 80px;
+            margin-top: 16px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+        }
+        &-header{
+            font-size: 16px;
+            font-weight: 300;
+            text-align: center;
+            padding: 30px 0;
+        }
+        .form-con{
+        }
+        .login-tip{
+            font-size: 10px;
+            text-align: center;
+            color: #c3c3c3;
+        }
+    }
+}

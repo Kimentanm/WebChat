@@ -1,0 +1,24 @@
+spring:
+    datasource:
+        url: jdbc:mysql://111.231.135.83:33307/hsd-server?useUnicode=true&characterEncoding=utf8&useSSL=false
+        username: root
+        password: mys@l@kimen
+        driver-class-name: com.mysql.jdbc.Driver
+        max-idle: 10
+        max-wait: 10000
+        min-idle: 5
+        initial-size: 5
+        validation-query: SELECT 1
+        test-on-borrow: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 18800
+
+server:
+  context-path: /hsd-server
+  port: 7070
+application:
+qiniuyun:
+        ak: T5XQB_CwNFrIdhVvTClo66SdRdUhGPIt6K2iFE4Y
+        sk: kJKqehmTegWIXZrR9AkZ2agrV38zZJ1wQypEYwue
+        bucket: hsd-server
+        outline: http://p7fnz7roh.bkt.clouddn.com/
